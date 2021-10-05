@@ -13,7 +13,7 @@ V-Rock
 "2 Minutes to Midnight"	Iron Maiden	6:00
 "Raining Blood"	Slayer	4:13
 "Cumin' Atcha Live"	Tesla	4:26
-BBB"Yankee Rose"	David Lee Roth	3:50
+"Yankee Rose"	David Lee Roth	3:50
 
 
 Wave 103
@@ -54,12 +54,12 @@ Flash FM
 "Four Little Diamonds"	Electric Light Orchestra	4:06
 "Billie Jean"	Michael Jackson	4:54
 "Your Love"	The Outfield	3:41
-6.	"Life's What You Make It"	Talk Talk	4:25
-7.	"Run to You"	Bryan Adams	3:49
-8.	"Dance Hall Days"	Wang Chung	3:50
-10.	"Call Me"	Go West	4:08
-12.	"Running with the Night"	Lionel Richie	5:58
-14.	"Self Control"	Laura Branigan	4:01
-16.	"Kiss the Dirt (Falling Down the Mountain)"	INXS	3:54
-17.	"Owner of a Lonely Heart"	Yes	4:23
+"Life's What You Make It"	Talk Talk	4:25
+"Run to You"	Bryan Adams	3:49
+"Dance Hall Days"	Wang Chung	3:50
+"Call Me"	Go West	4:08
+"Running with the Night"	Lionel Richie	5:58
+"Self Control"	Laura Branigan	4:01
+"Kiss the Dirt (Falling Down the Mountain)"	INXS	3:54
+"Owner of a Lonely Heart"	Yes	4:23
 
