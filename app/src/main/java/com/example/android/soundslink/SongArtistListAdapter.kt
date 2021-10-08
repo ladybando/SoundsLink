@@ -1,13 +1,21 @@
 package com.example.android.soundslink
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.soundslink.data.allArtistsList
+import com.example.android.soundslink.data.allSongsList
 import com.example.android.soundslink.databinding.SongItemLayoutBinding
 
-class SongArtistListAdapter(listOfSongs: List<String>, listOfAlbums: List<String>) : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
-    private var listOfSongs = listOf<String>()
-    private var listOfAlbums = listOf<String>()
+//should set how recyclerview items look
+//should functionality should be set to activity?
+//and data should be set to viewmodel?
+class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
+    //as of right now only displaying the last song and artist in list
+
+    private val song = allSongsList
+    private val artist = allArtistsList
 
     inner class SongViewHolder(binding: SongItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -22,11 +30,15 @@ class SongArtistListAdapter(listOfSongs: List<String>, listOfAlbums: List<String
         return SongViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
-        holder.artistTextView.text = listOfSongs[position]
-        holder.songAlbumName.text = listOfAlbums[position]
-        holder.albumArtImage.setImageResource(R.drawable.gta_vicecity_main)
+    //returning two songs now
+    override fun onBindViewHolder(holder: SongViewHolder, position: Int) = with(holder) {
+        artistTextView.text = song[position]
+        songAlbumName.text = artist[position]
+        val song = song[position]
+        Log.d("Adapter song", song)
+        albumArtImage.setImageResource(R.drawable.gta_vicecity_main)
     }
 
-    override fun getItemCount(): Int = listOfSongs.size
+    private val allList = song + artist
+    override fun getItemCount(): Int = allList.size
 }

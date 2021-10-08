@@ -5,19 +5,19 @@ import com.example.android.soundslink.data.allArtistsList
 import com.example.android.soundslink.data.allSongsList
 
 class SongsViewModel : ViewModel() {
-    private var songsList : List<String> = listOf()
-    private lateinit var currentSong : String
-    private lateinit var currentArtist: String
+    private var _songsList : List<String> = listOf()
+    val songsList : List<String> get() = _songsList
 
-    private fun getSong(position: Int){
-        currentSong = allArtistsList[position]
+    private lateinit var _currentSong : String
+    val currentSong : String get() =  _currentSong
+
+    private lateinit var _currentArtist: String
+    val currentArtist : String get() = _currentArtist
+
+   fun getSong(position: Int){
+        _currentSong = allArtistsList[position]
     }
-
-    private fun getArtist(position: Int){
-        currentArtist = allSongsList[position]
-    }
-
-    private fun allSongsList(): List<String> {
-        return songsList
+    fun getArtist(position: Int){
+        _currentArtist = allSongsList[position]
     }
 }
