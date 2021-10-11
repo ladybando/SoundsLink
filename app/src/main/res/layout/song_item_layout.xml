@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="140dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/song_album_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="8dp"
+        android:padding="4dp"
         android:contentDescription="@string/song_pic_desc"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/tv_song_title"
-        android:layout_width="188dp"
+        android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="8dp"
         android:gravity="center_vertical"
         android:padding="16dp"
@@ -27,10 +33,10 @@
 
     <TextView
         android:id="@+id/tv_artist_name"
-        android:layout_width="191dp"
+        android:layout_width="245dp"
         android:layout_height="52dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="564dp"
         android:gravity="center_vertical"
         android:padding="16dp"
