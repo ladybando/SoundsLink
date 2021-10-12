@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
         adapter = SongArtistListAdapter()
         setUpRecyclerView()
         //todo figure out how to get viewModel list to display with picture and appropriate text
-        //how can i associate singer with song?
-
+        //todo first figure out how to associate station with correct icon
 
         //have view model functions that take an int and allow mainactivity to set resources per adapter item
         // songItem = viewModel.getResourcefromResources(getResources().

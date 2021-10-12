@@ -1,9 +1,5 @@
 package com.example.android.soundslink.data
 
-import android.content.Context
-import android.util.Log
-import java.io.BufferedReader
-
 //list of artist names
 
 val allArtistsList: List<String> =
@@ -54,5 +50,46 @@ val allArtistsList: List<String> =
         "Lionel Richie",
         "Laura Branigan",
         "INXS",
-        "Yes"
+        "Yes",
+        "Trouble Funk",
+        "Davy DMX",
+        "Cybotron",
+        "Hashim",
+        "Herbie Hancock",
+        "Afrika Bambaataa and The Soul Sonic Force",
+        "2 Live Crew",
+        "Run-D.M.C",
+        "Mantronix",
+        "Tyrone Brunson",
+        "Whodini",
+        "Zapp & Roger",
+        "Grandmaster Flash and the Furious Five",
+        "Kurtis Blow",
+        "Man Parrish",
+        "Cachao",
+        "Alpha Banditos",
+        "Tres Apenas Como Eso",
+        "Deodato",
+        "Mongo Santamaría",
+        "Machito and his Afro-Cuban Orchestra",
+        "Unaesta",
+        "Lonnie Liston Smith",
+        "Irakere",
+        "Deodato",
+        "Xavier Cugat and his Orchestra",
+        "Benny Moré",
+        "Tito Puente",
+        "The Whispers",
+        "Fat Larry's Band",
+        "Oliver Cheatham",
+        "Pointer Sisters",
+        "René & Angela",
+        "Mary Jane Girls",
+        "Rick James",
+        "Michael Jackson",
+        "Evelyn \"Champagne\" King",
+        "Teena Marie",
+        "Mtume",
+        "Kool & the Gang",
+        "Indeep"
     )
