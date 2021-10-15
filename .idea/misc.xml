@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/activity_main.xml" value="0.14375" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/fragment_radio.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/fragment_radio_list.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/fragment_song_list.xml" value="0.1" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/fragment_songs.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/fragment_songs_list.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/radio_list_layout.xml" value="0.275" />
         <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/song_item_layout.xml" value="0.268" />
+        <entry key="..\:/Users/ayana/AndroidStudioProjects/SoundsLink/app/src/main/res/layout/songs_list_layout.xml" value="0.1337386018237082" />
       </map>
     </option>
   </component>

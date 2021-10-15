@@ -2,8 +2,8 @@ package com.example.android.soundslink.data
 
 //list of artist names
 
-val allArtistsList: List<String> =
-    listOf("Judas Priest",
+val allArtistsList: ArrayList<String?> =
+    arrayListOf("Judas Priest",
         "Mötley Crüe",
         "Megadeth",
         "Love Fist",
@@ -91,5 +91,6 @@ val allArtistsList: List<String> =
         "Teena Marie",
         "Mtume",
         "Kool & the Gang",
-        "Indeep"
+        "Indeep",
+
     )

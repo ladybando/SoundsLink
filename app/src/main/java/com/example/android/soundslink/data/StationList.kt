@@ -1,13 +1,13 @@
 package com.example.android.soundslink.data
 
-val stationList: List<String> =
-    listOf(
+val stationList: ArrayList<String?> =
+    arrayListOf(
         "Flash FM",
-        "Emotion 98.3",
-        "Wave 103",
-        "V-Rock",
-        "Wildstyle",
         "Fever 105",
-        "Espantoso"
+        "Emotion 98.3",
+        "Espantoso",
+        "Wildstyle",
+        "Wave 103",
+        "V-Rock"
     )
 

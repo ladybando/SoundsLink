@@ -1,6 +1,6 @@
 package com.example.android.soundslink.data
 
-val allSongsList: List<String> =
+val allSongsList: List<String?> =
     listOf("You've Got Another Thing Comin'",
         "Too Young to Fall in Love",
         "Peace Sells",

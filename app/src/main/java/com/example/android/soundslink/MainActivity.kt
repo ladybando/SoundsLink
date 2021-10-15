@@ -1,41 +1,37 @@
 package com.example.android.soundslink
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.android.soundslink.adapter.SongArtistListAdapter
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.android.soundslink.databinding.ActivityMainBinding
-import com.example.android.soundslink.model.SongsViewModel
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
+
     private lateinit var binding: ActivityMainBinding
-    private lateinit var adapter: SongArtistListAdapter
-    private val viewModel: SongsViewModel by viewModels()
+    private lateinit var navController: NavController
+
 //creates window for ui
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        adapter = SongArtistListAdapter()
-        setUpRecyclerView()
-        //todo figure out how to get viewModel list to display with picture and appropriate text
-        //todo first figure out how to associate station with correct icon
 
-        //have view model functions that take an int and allow mainactivity to set resources per adapter item
-        // songItem = viewModel.getResourcefromResources(getResources().
-        //getIntArray(R.array.stamp_counter_array))
-
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.fragment_container) as NavHostFragment
+        navController = navHostFragment.navController
     }
 
-    private fun setUpRecyclerView(){
-        recyclerView = binding.recycleViewList
-        adapter = SongArtistListAdapter()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
+    //todo complete start page that will show stations with the correct icon
+    //todo finish container view so emulator will load - navgraph settings
+
+    //have view model functions that take an int and allow mainactivity to set resources per adapter item
+    // songItem = viewModel.getResourcefromResources(getResources().
+    //getIntArray(R.array.stamp_counter_array))
+
 }

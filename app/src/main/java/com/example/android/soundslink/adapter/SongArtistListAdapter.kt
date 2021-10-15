@@ -1,19 +1,21 @@
 package com.example.android.soundslink.adapter
 
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import com.example.android.soundslink.R
 import com.example.android.soundslink.data.allArtistsList
 import com.example.android.soundslink.data.allSongsList
-import com.example.android.soundslink.databinding.SongItemLayoutBinding
+import com.example.android.soundslink.data.iconsList
+import com.example.android.soundslink.databinding.SongsListLayoutBinding
 
 class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
 
     private val song = allSongsList
     private val artist = allArtistsList
+    private val icons = iconsList
 
-    inner class SongViewHolder(binding: SongItemLayoutBinding) :
+    inner class SongViewHolder(binding: SongsListLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         var artistTextView = binding.tvArtistName
         var songAlbumName = binding.tvSongTitle
@@ -22,7 +24,7 @@ class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongViewHolder {
         val binding =
-            SongItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            SongsListLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SongViewHolder(binding)
     }
 
