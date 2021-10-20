@@ -4,16 +4,13 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.android.soundslink.R
-import com.example.android.soundslink.data.allArtistsList
-import com.example.android.soundslink.data.allSongsList
-import com.example.android.soundslink.data.iconsList
+import com.example.android.soundslink.data.*
 import com.example.android.soundslink.databinding.SongsListLayoutBinding
 
 class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
 
     private val song = allSongsList
     private val artist = allArtistsList
-    private val icons = iconsList
 
     inner class SongViewHolder(binding: SongsListLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {

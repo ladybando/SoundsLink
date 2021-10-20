@@ -27,11 +27,4 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
-    //todo complete start page that will show stations with the correct icon
-    //todo finish container view so emulator will load - navgraph settings
-
-    //have view model functions that take an int and allow mainactivity to set resources per adapter item
-    // songItem = viewModel.getResourcefromResources(getResources().
-    //getIntArray(R.array.stamp_counter_array))
-
 }

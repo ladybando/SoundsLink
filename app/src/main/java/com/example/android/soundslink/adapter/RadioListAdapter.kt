@@ -1,7 +1,6 @@
 package com.example.android.soundslink.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +10,8 @@ import com.example.android.soundslink.databinding.RadioListLayoutBinding
 
 class RadioListAdapter(private val context: Context, private val stationData: ArrayList<String?>, private val iconData: ArrayList<Int?>, private val listener: OnCLickListener) : RecyclerView.Adapter<RadioListAdapter.RadioViewHolder>() {
 
-    private var stationName = ArrayList<String?>()
-    private var stationIcon = ArrayList<Int?>()
+    private var stationName = stationList
+    private var stationIcon = iconsList
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -24,10 +23,6 @@ class RadioListAdapter(private val context: Context, private val stationData: Ar
 
     override fun onBindViewHolder(holder: RadioListAdapter.RadioViewHolder, position: Int) = with(holder) {
         //throws out of bounds exception even with addition of vrock image
-        val stationSize = stationName.size
-        val iconSize = stationIcon.size
-        Log.i("RadioAdapter station", "$stationSize" )
-        Log.i("RadioAdapter icon", "$iconSize")
         radioAlbumImage.setImageResource(stationIcon[position]!!)
         radioTitle.text = stationName[position]
     }

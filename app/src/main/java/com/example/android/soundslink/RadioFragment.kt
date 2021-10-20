@@ -1,18 +1,15 @@
 package com.example.android.soundslink
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.soundslink.adapter.RadioListAdapter
-import com.example.android.soundslink.adapter.SongArtistListAdapter
 import com.example.android.soundslink.databinding.FragmentRadioBinding
 import com.example.android.soundslink.model.SongsViewModel
 
@@ -29,6 +26,8 @@ class RadioFragment : Fragment(), RadioListAdapter.OnCLickListener {
     private val binding get() = _binding!!
 
     private val viewModel: SongsViewModel by activityViewModels()
+    private var iconData = arrayListOf<Int?>()
+    private var stationData = arrayListOf<String?>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,21 +41,29 @@ class RadioFragment : Fragment(), RadioListAdapter.OnCLickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = RadioListAdapter( this.requireContext(),viewModel.getStationData(),viewModel.getIconData(),this)
-        val station = viewModel.getStationData()
-        val icon = viewModel.getIconData()
-        Log.i("RadioFrag", "$station")
-        Log.i("RadioFrag", "$icon")
+        stationData = viewModel.stationNameList
+        iconData = viewModel.iconImageList
+
+        adapter = RadioListAdapter(this.requireContext(), stationData, iconData, this)
+
         recyclerView = binding.recyclerViewList
-        recyclerView.layoutManager = LinearLayoutManager(this.requireContext())
         recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this.requireContext())
 
     }
 
     //todo create radio stations which link to correct songs
     override fun onTaskClicked(index: Int) {
-        val action = RadioFragmentDirections.actionRadioFragmentToSongsFragment()
-        findNavController().navigate(action)
+        //if click on flash picture
+        val stationImage = viewModel.iconImageList
+        if (stationImage[index] == stationImage[0]) {
+            val action = RadioFragmentDirections.actionRadioFragmentToFlashStationFragment()
+            findNavController().navigate(action)
+        } else {
+            //navigate to flash stations
+            val action = RadioFragmentDirections.actionRadioFragmentToSongsFragment()
+            findNavController().navigate(action)
+        }
     }
 
 }

@@ -2,95 +2,109 @@ package com.example.android.soundslink.data
 
 //list of artist names
 
-val allArtistsList: ArrayList<String?> =
-    arrayListOf("Judas Priest",
-        "Mötley Crüe",
-        "Megadeth",
-        "Love Fist",
-        "Autograph",
-        "Twisted Sister",
-        "Ozzy Osbourne",
-        "Anthrax",
-        "Iron Maiden",
-        "Slayer",
-        "Tesla",
-        "David Lee Roth",
-        "Frankie Goes to Hollywood",
-        "Tears for Fear",
-        "Kim Wilde",
-        "Blondie",
-        "A Flock of Seagulls",
-        "The Human League",
-        "Nena",
-        "The Psychedelic Furs",
-        "Spandau Ballet",
-        "Thomas Dolby",
-        "Animotion",
-        "Romeo Void",
-        "Corey Hart",
-        "Toto",
-        "Jan Hammer",
-        "John Waite",
-        "Cutting Crew",
-        "Foreigner",
-        "Mr.Mister",
-        "Roxy Music",
-        "Squeeze",
-        "REO Speedwagon",
-        "Night Ranger",
-        "Luther Vandross",
-        "Kate Bush",
-        "Hall & Oates",
-        "Light Orchestra",
-        "Michael Jackson",
-        "The Outfield",
-        "Talk Talk",
-        "Bryan Adams",
-        "Wang Chung",
-        "Lionel Richie",
-        "Laura Branigan",
-        "INXS",
-        "Yes",
-        "Trouble Funk",
-        "Davy DMX",
-        "Cybotron",
-        "Hashim",
-        "Herbie Hancock",
-        "Afrika Bambaataa and The Soul Sonic Force",
-        "2 Live Crew",
-        "Run-D.M.C",
-        "Mantronix",
-        "Tyrone Brunson",
-        "Whodini",
-        "Zapp & Roger",
-        "Grandmaster Flash and the Furious Five",
-        "Kurtis Blow",
-        "Man Parrish",
-        "Cachao",
-        "Alpha Banditos",
-        "Tres Apenas Como Eso",
-        "Deodato",
-        "Mongo Santamaría",
-        "Machito and his Afro-Cuban Orchestra",
-        "Unaesta",
-        "Lonnie Liston Smith",
-        "Irakere",
-        "Deodato",
-        "Xavier Cugat and his Orchestra",
-        "Benny Moré",
-        "Tito Puente",
-        "The Whispers",
-        "Fat Larry's Band",
-        "Oliver Cheatham",
-        "Pointer Sisters",
-        "René & Angela",
-        "Mary Jane Girls",
-        "Rick James",
-        "Michael Jackson",
-        "Evelyn \"Champagne\" King",
-        "Teena Marie",
-        "Mtume",
-        "Kool & the Gang",
-        "Indeep",
 
-    )
+val flashArtistList: ArrayList<String?> = arrayListOf(
+    "Hall & Oates",
+    "Light Orchestra",
+    "Michael Jackson",
+    "The Outfield",
+    "Talk Talk",
+    "Bryan Adams",
+    "Wang Chung",
+    "Lionel Richie",
+    "Laura Branigan",
+    "INXS",
+    "Yes",
+)
+
+val vrockArtistList: ArrayList<String?> = arrayListOf(
+    "Judas Priest",
+    "Mötley Crüe",
+    "Megadeth",
+    "Love Fist",
+    "Autograph",
+    "Twisted Sister",
+    "Ozzy Osbourne",
+    "Anthrax",
+    "Iron Maiden",
+    "Slayer",
+    "Tesla",
+    "David Lee Roth"
+)
+
+val waveArtistList: ArrayList<String?> = arrayListOf(
+    "Frankie Goes to Hollywood",
+    "Tears for Fear",
+    "Kim Wilde",
+    "Blondie",
+    "A Flock of Seagulls",
+    "The Human League",
+    "Nena",
+    "The Psychedelic Furs",
+    "Spandau Ballet",
+    "Thomas Dolby",
+    "Animotion",
+    "Romeo Void",
+    "Corey Hart"
+)
+
+val emotionArtistList: ArrayList<String?> = arrayListOf(
+    "Toto",
+    "Jan Hammer",
+    "John Waite",
+    "Cutting Crew",
+    "Foreigner",
+    "Mr.Mister",
+    "Roxy Music",
+    "Squeeze",
+    "REO Speedwagon",
+    "Night Ranger",
+    "Luther Vandross",
+    "Kate Bush"
+)
+
+val espantosoArtistList: ArrayList<String?> = arrayListOf(
+    "Cachao",
+    "Alpha Banditos",
+    "Tres Apenas Como Eso",
+    "Deodato",
+    "Mongo Santamaría",
+    "Machito and his Afro-Cuban Orchestra",
+    "Unaesta",
+    "Lonnie Liston Smith",
+    "Irakere",
+    "Deodato",
+    "Xavier Cugat and his Orchestra",
+    "Benny Moré",
+    "Tito Puente"
+)
+
+val wildstyleArtistList: ArrayList<String?> = arrayListOf(
+    "The Whispers",
+    "Fat Larry's Band",
+    "Oliver Cheatham",
+    "Pointer Sisters",
+    "René & Angela",
+    "Mary Jane Girls",
+    "Rick James",
+    "Michael Jackson",
+    "Evelyn \"Champagne\" King",
+    "Teena Marie",
+    "Mtume",
+    "Kool & the Gang",
+    "Indeep"
+)
+val allArtistsList: ArrayList<String?> = arrayListOf()
+class ArtistNameList {
+
+    fun addToAllArtist(): ArrayList<String?> {
+        allArtistsList.addAll(flashArtistList)
+        allArtistsList.addAll(vrockArtistList)
+        allArtistsList.addAll(vrockArtistList)
+        allArtistsList.addAll(vrockArtistList)
+        allArtistsList.addAll(vrockArtistList)
+        allArtistsList.addAll(vrockArtistList)
+        return allArtistsList
+    }
+
+}

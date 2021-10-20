@@ -3,6 +3,5 @@
     <string name="song_pic_desc">Album Picture</string>
     <string name="album_title">Album Title</string>
     <string name="artist_name">Artist Name</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="radio_title">Radio Title</string>
 </resources>
