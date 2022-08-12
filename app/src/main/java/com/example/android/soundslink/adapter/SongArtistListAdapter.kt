@@ -7,11 +7,11 @@ import com.example.android.soundslink.R
 import com.example.android.soundslink.data.*
 import com.example.android.soundslink.databinding.SongsListLayoutBinding
 
-class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
-
-    private val song = allSongsList
-    private val artist = allArtistsList
-
+class SongArtistListAdapter() : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
+//this is an array list of strings
+    //need to pass this as parameter
+    val artist = allArtistsList
+    val song  = allSongsList
     inner class SongViewHolder(binding: SongsListLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         var artistTextView = binding.tvArtistName
@@ -26,8 +26,8 @@ class SongArtistListAdapter : RecyclerView.Adapter<SongArtistListAdapter.SongVie
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) = with(holder) {
-        artistTextView.text = song[position]
-        songAlbumName.text = artist[position]
+        artistTextView.text = song[position].toString()
+        songAlbumName.text = artist[position].toString()
         albumArtImage.setImageResource(R.drawable.gta_vicecity_main)
     }
 

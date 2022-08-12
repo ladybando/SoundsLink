@@ -10,6 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.soundslink.adapter.RadioListAdapter
+import com.example.android.soundslink.data.flashArtistList
+import com.example.android.soundslink.data.flashSongList
 import com.example.android.soundslink.databinding.FragmentRadioBinding
 import com.example.android.soundslink.model.SongsViewModel
 
@@ -53,17 +55,13 @@ class RadioFragment : Fragment(), RadioListAdapter.OnCLickListener {
     }
 
     //todo create radio stations which link to correct songs
+    //todo: reusable fragments representing each radio station
+    //how and where should I iterate over allSongsList etc...
     override fun onTaskClicked(index: Int) {
-        //if click on flash picture
-        val stationImage = viewModel.iconImageList
-        if (stationImage[index] == stationImage[0]) {
-            val action = RadioFragmentDirections.actionRadioFragmentToFlashStationFragment()
-            findNavController().navigate(action)
-        } else {
-            //navigate to flash stations
-            val action = RadioFragmentDirections.actionRadioFragmentToSongsFragment()
-            findNavController().navigate(action)
-        }
-    }
+        //navigate to songs fragment and pass appropriate image
+        val action =
+            RadioFragmentDirections.actionRadioFragmentToFlashStationFragment()
+        findNavController().navigate(action)
 
+    }
 }

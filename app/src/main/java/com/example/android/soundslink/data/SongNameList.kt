@@ -108,6 +108,10 @@ val feverSongList: ArrayList<String?> = arrayListOf(
 )
 
 class SongNameList {
+
+    init {
+        addToAllSongs()
+    }
     fun addToAllSongs(): ArrayList<String?> {
         allSongsList.addAll(flashArtistList)
         allSongsList.addAll(vrockArtistList)
