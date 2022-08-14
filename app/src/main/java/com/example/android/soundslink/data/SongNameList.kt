@@ -1,10 +1,33 @@
 package com.example.android.soundslink.data
 
-val allSongsList: ArrayList<String?> = arrayListOf()
+
+class SongNameList {
+    val allSongsList: ArrayList<String?> = arrayListOf()
+
+    init {
+        addToSongs()
+    }
+
+    fun addToSongs(): ArrayList<String?> {
+        allSongsList.addAll(flashSongList)
+        allSongsList.addAll(vrockSongList)
+        allSongsList.addAll(vrockSongList)
+        allSongsList.addAll(vrockSongList)
+        allSongsList.addAll(vrockSongList)
+        allSongsList.addAll(vrockSongList)
+        allSongsList.addAll(waveSongList)
+        allSongsList.addAll(emotionSongList)
+        allSongsList.addAll(espantosoSongList)
+        allSongsList.addAll(wildstyleSongList)
+        allSongsList.addAll(feverSongList)
+        return allSongsList
+    }
+}
 
 //list by station and create allList by adding them to allList array
-val flashSongList: ArrayList<String?> =
-    arrayListOf("Out of Touch",
+val flashSongList =
+    arrayListOf(
+        "Out of Touch",
         "Four Little Diamonds",
         "Billie Jean",
         "Your Love",
@@ -14,8 +37,9 @@ val flashSongList: ArrayList<String?> =
         "Running with the Night",
         "Self Control",
         "Kiss the Dirt (Falling Down the Mountain)",
-        "Owner of a Lonely Heart")
-val vrockSongList: ArrayList<String?> = arrayListOf(
+        "Owner of a Lonely Heart"
+    )
+val vrockSongList = arrayListOf(
     "You've Got Another Thing Comin'",
     "Too Young to Fall in Love",
     "Peace Sells",
@@ -91,6 +115,7 @@ val wildstyleSongList: ArrayList<String?> = arrayListOf(
     "The Breaks",
     "Hip Hop, Be Bop (Don't Stop)"
 )
+
 val feverSongList: ArrayList<String?> = arrayListOf(
     "And the Beat Goes On",
     "Act Like You Know",
@@ -106,19 +131,3 @@ val feverSongList: ArrayList<String?> = arrayListOf(
     "Summer Madness",
     "Last Night a D.J. Saved My Life"
 )
-
-class SongNameList {
-
-    init {
-        addToAllSongs()
-    }
-    fun addToAllSongs(): ArrayList<String?> {
-        allSongsList.addAll(flashArtistList)
-        allSongsList.addAll(vrockArtistList)
-        allSongsList.addAll(vrockArtistList)
-        allSongsList.addAll(vrockArtistList)
-        allSongsList.addAll(vrockArtistList)
-        allSongsList.addAll(vrockArtistList)
-        return allSongsList
-    }
-}

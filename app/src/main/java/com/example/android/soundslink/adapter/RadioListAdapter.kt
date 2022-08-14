@@ -8,7 +8,7 @@ import com.example.android.soundslink.data.iconsList
 import com.example.android.soundslink.data.stationList
 import com.example.android.soundslink.databinding.RadioListLayoutBinding
 
-class RadioListAdapter(private val context: Context, private val stationData: ArrayList<String?>, private val iconData: ArrayList<Int?>, private val listener: OnCLickListener) : RecyclerView.Adapter<RadioListAdapter.RadioViewHolder>() {
+class RadioListAdapter(context: Context, stationData: ArrayList<String?>, iconData: ArrayList<Int?>, private val listener: OnCLickListener) : RecyclerView.Adapter<RadioListAdapter.RadioViewHolder>() {
 
     private var stationName = stationList
     private var stationIcon = iconsList
@@ -36,10 +36,10 @@ class RadioListAdapter(private val context: Context, private val stationData: Ar
 
         init {
             radioTitle.setOnClickListener {
-                listener.onTaskClicked(absoluteAdapterPosition)
+                listener.onStationClicked(absoluteAdapterPosition)
             }
             radioAlbumImage.setOnClickListener{
-                listener.onTaskClicked(absoluteAdapterPosition)
+                listener.onStationClicked(absoluteAdapterPosition)
             }
         }
     }
@@ -51,6 +51,6 @@ class RadioListAdapter(private val context: Context, private val stationData: Ar
     }
 
     interface OnCLickListener{
-        fun onTaskClicked(index: Int)
+        fun onStationClicked(index: Int)
     }
 }

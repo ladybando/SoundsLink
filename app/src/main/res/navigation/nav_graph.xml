@@ -13,15 +13,9 @@
         <action
             android:id="@+id/action_radioFragment_to_songsFragment"
             app:destination="@id/songsFragment" />
-        <action
-            android:id="@+id/action_radioFragment_to_flashStationFragment"
-            app:destination="@id/flashStationFragment" />
         <argument
-            android:name="stationImage"
-            app:argType="integer" />
-        <argument
-            android:name="stationInfo"
-            app:argType="integer" />
+            android:name="songTitle"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/songsFragment"
@@ -29,18 +23,7 @@
         android:label="fragment_songs"
         tools:layout="@layout/fragment_songs">
         <argument
-            android:name="stationImage"
-            app:argType="integer" />
-        <argument
-            android:name="stationInfo"
+            android:name="songTitle"
             app:argType="string" />
     </fragment>
-    <fragment
-        android:id="@+id/flashStationFragment"
-        android:name="com.example.android.soundslink.stationfrags.FlashStationFragment"
-        android:label="fragment_flash_list"
-        tools:layout="@layout/fragment_flash_list" />
-    <action
-        android:id="@+id/action_radioFragment_to_songsFragment"
-        app:destination="@id/songsFragment" />
 </navigation>

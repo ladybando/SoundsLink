@@ -2,7 +2,7 @@ package com.example.android.soundslink.data
 
 //list of artist names
 
-
+class ArtistNameList {
 val flashArtistList: ArrayList<String?> = arrayListOf(
     "Hall & Oates",
     "Light Orchestra",
@@ -95,15 +95,15 @@ val wildstyleArtistList: ArrayList<String?> = arrayListOf(
     "Indeep"
 )
 val allArtistsList: ArrayList<String?> = arrayListOf()
-class ArtistNameList {
 
-    fun addToAllArtist(): ArrayList<String?> {
+
+    fun addToArtist(): ArrayList<String?> {
+        allArtistsList.addAll(emotionArtistList)
+        allArtistsList.addAll(espantosoArtistList)
         allArtistsList.addAll(flashArtistList)
         allArtistsList.addAll(vrockArtistList)
-        allArtistsList.addAll(vrockArtistList)
-        allArtistsList.addAll(vrockArtistList)
-        allArtistsList.addAll(vrockArtistList)
-        allArtistsList.addAll(vrockArtistList)
+        allArtistsList.addAll(waveArtistList)
+        allArtistsList.addAll(wildstyleArtistList)
         return allArtistsList
     }
 

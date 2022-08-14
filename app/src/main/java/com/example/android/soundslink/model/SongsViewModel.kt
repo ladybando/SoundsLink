@@ -1,27 +1,25 @@
 package com.example.android.soundslink.model
 
 import androidx.lifecycle.ViewModel
-import com.example.android.soundslink.data.allSongsList
-import com.example.android.soundslink.data.iconsList
-import com.example.android.soundslink.data.stationList
+import com.example.android.soundslink.data.*
 
 class SongsViewModel : ViewModel() {
     private var _stationNameList: ArrayList<String?> = stationList
     val stationNameList get() = _stationNameList
 
     private var _iconImageList: ArrayList<Int?> = iconsList
-    val iconImageList get() = _iconImageList
+    val iconImageList get() = this._iconImageList
 
-    private var _songTitleList: ArrayList<String?> = allSongsList
+
+    private var _songTitleList: ArrayList<String?> = SongNameList().addToSongs()
     val songTitleList get() = _songTitleList
 
-    private var _iconImage : Int? = null
-    val iconImage get() = _iconImage!!
+    private var _artistNameList: ArrayList<String?> = ArtistNameList().addToArtist()
+    val artistNameList get() = _artistNameList
 
-    fun getIconImage(){
-        for(element in iconsList){
-            _iconImage = element
-        }
-    }
+    private var _flashSongsList: ArrayList<String> = flashSongList
+    val flashSongsList get() = _flashSongsList
+
+    private var
 
 }

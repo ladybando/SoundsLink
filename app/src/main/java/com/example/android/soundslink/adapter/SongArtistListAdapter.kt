@@ -1,17 +1,20 @@
 package com.example.android.soundslink.adapter
 
-import androidx.recyclerview.widget.RecyclerView
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.android.soundslink.R
-import com.example.android.soundslink.data.*
+import androidx.recyclerview.widget.RecyclerView
+import com.example.android.soundslink.data.ArtistNameList
+import com.example.android.soundslink.data.SongNameList
+import com.example.android.soundslink.data.iconsList
 import com.example.android.soundslink.databinding.SongsListLayoutBinding
 
-class SongArtistListAdapter() : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
-//this is an array list of strings
-    //need to pass this as parameter
-    val artist = allArtistsList
-    val song  = allSongsList
+class SongArtistListAdapter(context: Context, albumImage: ArrayList<Int?>, artist: ArrayList<String?>, song: ArrayList<String?>, private val listener: OnCLickListener) : RecyclerView.Adapter<SongArtistListAdapter.SongViewHolder>() {
+
+    var songs = SongNameList().addToSongs()
+    var artists = ArtistNameList().addToArtist()
+    var albumImages = iconsList
+
     inner class SongViewHolder(binding: SongsListLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         var artistTextView = binding.tvArtistName
@@ -26,11 +29,22 @@ class SongArtistListAdapter() : RecyclerView.Adapter<SongArtistListAdapter.SongV
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) = with(holder) {
-        artistTextView.text = song[position].toString()
-        songAlbumName.text = artist[position].toString()
-        albumArtImage.setImageResource(R.drawable.gta_vicecity_main)
+        artistTextView.text = songs[position]
+        songAlbumName.text = artists[position]
+        albumArtImage.setImageResource(albumImages[position]!!)
     }
 
-    private val allList = song + artist
+    init{
+        LayoutInflater.from(context)
+        songs = song
+        artists = artist
+        albumImages = albumImage
+    }
+
+    interface OnCLickListener{
+        fun onStationClicked(index: Int)
+    }
+
+    private val allList = songs + artists
     override fun getItemCount(): Int = allList.size
 }
